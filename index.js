@@ -1,4 +1,4 @@
-import {wordsArray as seedWords} from "./words2.js"
+import {wordsArray as seedWords} from "./words.js"
 
 const seedPhraseLengthEl = document.getElementById("seed-length")
 const generateSeedPhraseBtn = document.getElementById("generate-btn")
