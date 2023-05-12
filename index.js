@@ -1,12 +1,9 @@
-import wordsArray from "./words.js"
+import {wordsArray as seedWords} from "./words2.js"
 
-const seedWords = Object.values(wordsArray);
 const seedPhraseLengthEl = document.getElementById("seed-length")
 const generateSeedPhraseBtn = document.getElementById("generate-btn")
 const seedPhraseOutputEl = document.getElementById("seed-phrase-output")
 generateSeedPhraseBtn.addEventListener("click", createSeedPhrase)
-
-
 
 function createSeedPhrase(){
     const seedPhraseLength = seedPhraseLengthEl.value;
