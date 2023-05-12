@@ -7,10 +7,14 @@ let randomSeedPosition
 let chosenWord = ""
 let seedPhrase = [];
 
-for (let i=0; i<seedPhraseLength; i++){
+while (seedPhrase.length<seedPhraseLength){
+    
     randomSeedPosition = Math.floor(Math.random()*numberOfSeedWords);
     chosenWord = seedWords[randomSeedPosition];
-    seedPhrase.push(chosenWord);
+
+    if(!seedPhrase.includes(chosenWord)){
+        seedPhrase.push(chosenWord);
+    }
 }
 
 
