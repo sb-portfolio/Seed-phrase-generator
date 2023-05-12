@@ -25,5 +25,4 @@ function createSeedPhrase(){
     seedPhrase.forEach(word => {
         seedPhraseOutputEl.innerHTML += `<div class="seed-word">${word[0].toUpperCase()}${word.slice(1)}</div>`
     })
-    console.log(seedPhrase)
 }
