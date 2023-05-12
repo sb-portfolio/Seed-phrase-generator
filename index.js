@@ -7,9 +7,10 @@ const numberOfSeedWords = seedWords.length
 
 generateSeedPhraseBtn.addEventListener("click", createSeedPhrase)
 
-const randomSeedPosition = () => Math.floor(Math.random()*numberOfSeedWords);
-const randomWord = () => seedWords[randomSeedPosition()];
+const randomNumber = () => Math.floor(Math.random()*numberOfSeedWords);
+const randomWord = () => seedWords[randomNumber()];
 const wordNotAlreadyUsed = (array, word) => !array.includes(word)
+const addWordToSeedPhrase = (phrase, word) => phrase.push(word);
 
 function renderSeedPhrase(seedPhraseArray){
     seedPhraseOutputEl.innerHTML = ""
@@ -29,7 +30,7 @@ function createSeedPhrase(){
         chosenWord = randomWord()
 
         if(wordNotAlreadyUsed(seedPhrase, chosenWord)){
-            seedPhrase.push(chosenWord);
+            addWordToSeedPhrase(seedPhrase,chosenWord)
         }
     }
     renderSeedPhrase(seedPhrase)
